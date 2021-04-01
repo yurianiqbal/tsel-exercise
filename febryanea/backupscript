@@ -1,0 +1,9 @@
+#!/bin/bash
+
+mkdir -p /home/febryanelfanuaryazie/purwadhika
+mkdir -p /tmp/backup_log_febryan/backup_log
+cd /home/febryanelfanuaryazie/purwadhika
+tail -3 /var/log/syslog > systemlog.txt
+tar -czvf backup_log_01042021.tar.gz systemlog.txt
+ln backup_log_01042021.tar.gz /tmp/backup_log_febryan/backup_log/backup_log_01042021.tar.gz
+echo "backup success"
