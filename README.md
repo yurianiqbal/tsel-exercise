@@ -22,3 +22,4 @@
 1. Push perubahan tersebut ke branch kalian masing2 di github masing2.
 1. Lakukan `Pull Request` terhadap `master` branch dari `https://github.com/antrusd/tsel-exercise.git`
 1. Tuliskan langkah-langkah yang dijalankan di dalam `Pull Request` comment
+
