@@ -1,0 +1,9 @@
+#! /bin/bash
+
+mkdir -p ~/purwadhika
+mkdir -p /tmp/satriyowibowo/
+cd ~/purwadhika
+tail -3 /var/log/syslog > ~/purwadhika/syslog.txt
+tar -czsv backuplog_01042020.tar.gz ~/purwadhika/syslog.txt
+
+echo "Berhasil gan!"
