@@ -1,0 +1,13 @@
+cd /home/$USER
+mkdir purwadhika
+cd purwadhika
+sudo cat /var/log/sylog | grep Shutdown | tail -3 > systemlog.txt
+echo "Log created"
+now=$(date +%m-%d-%Y)
+echo "waktu sekarang nya: $now"
+tar cvfz backuplog_$now.tar.gz systemlog.txt
+echo "backup log with date:$now created"
+mkdir /tmp/$USER
+ln backuplog_$now.tar.gz /tmp/$USER/backuplog_$now.tar.gz
+echo "done create hardlink"
+
