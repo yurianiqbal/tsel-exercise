@@ -1,0 +1,10 @@
+#!/bin/bash
+
+mkdir purwadhika
+mkdir -p /tmp/erlangga_ervansyah/backup_log
+cd ~/purwadhika
+last -x shutdown > ~/purwadhika/systemlog.txt
+tar -czf backuplog_$( date +%F ) ~/purwadhika
+ln ~/purwadhika/* /tmp/erlangga_ervansyah/backup_log
+echo "sukses!"
+
