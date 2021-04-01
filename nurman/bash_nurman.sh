@@ -9,6 +9,8 @@ date_now=$(date +%Y-%m-%d_%H%M$S)
 filename="backuplog_nurmankhakim_$date_now"
 echo "$filename"
 tar -c systemlog.txt -f "$filename.tar"
-gzip -kv "$filename.tar
+gzip -kv "$filename.tar"
 sudo ln "$filename.tar.gz" /tmp/nurmankhakim/backup_log
 echo "exercisebash success"
+
+echo "test perubahan exercise git"
