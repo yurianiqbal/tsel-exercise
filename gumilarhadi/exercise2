@@ -1,0 +1,12 @@
+#exercise2
+
+sudo mkdir purwadhika;
+sudo mkdir /tmp/gumilarhadi/;
+sudo mkdir /tmp/gumilarhadi/backup_log/;
+cd ~/purwadhika;
+ls -l /var/log/syslog | grep Shutdown | tail -3 | sudo tee systemlog.txt;
+date=$(date "+%D_%T");
+sudo tar -c systemlog.txt -f systemlog.tar | gzip -c systemlog.tar | sudo tee backuplog_$date.tar.gz;
+sudo ln backuplog_$date.tar.gz /tmp/gumilarhadi/backup_log/;
+echo "Pekerjaan sudah selesai";
+
